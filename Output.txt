@@ -1,0 +1,61 @@
+Tyler Nguyen, Lucien Zheng 
+Test Outputs
+---------------------------------------------------------------
+#1
+Command: ./sniff -d TestDirectory -o Output.txt -r -c -h random 
+Start at: TestDirectory
+Output file name: Output.txt
+Verbose? No
+Case Sensitive? No
+Recursive? Yes
+Sniff Words: random
+===============================================================
+#2
+Command: ./sniff -d TestDirectory -o Output.txt Obama 
+Start at: TestDirectory
+Output file name: Output.txt
+Verbose? No
+Case sensitive? Yes
+Recursive? No
+Sniff Words: Obama
+===============================================================
+#5
+Command: ./sniff -v -d TestDirectory -o Output.txt -r -c word 
+Start at: TestDirectory
+Output file name: Output.txt
+Verbose? Yes
+Case Sensitive? No
+Recursive? Yes
+Sniff Words: word
+===============================================================
+#6
+Command: ./sniff -d TestDirectory -o Output.txt here 
+Start at: TestDirectory
+Output file name: Output.txt
+Verbose? No
+Case sensitive? Yes
+Recursive? No
+Sniff Words: here
+===============================================================
+
+//Test 1
+Command Line: ./sniff -d TestDirectory random -o Output.txt -r -c -h
+
+//Test 2
+Command Line: ./sniff -d TestDirectory Obama -o Output.txt
+
+//Test 3
+Command Line: ./sniff -h
+
+//Test 4
+Command Line: ./sniff -v -d TestDirectory -o Output.txt -r -c 
+
+//Test 5
+Command Line: ./sniff -v -d TestDirectory -o Output.txt -r -c word
+
+//Test 6
+Command Line: ./sniff -d TestDirectory -o Output.txt here
+
+//Tests 1, 2, 5, and 6 showed up in the Output.txt file since they included search words.
+//For Test #3, a help menu was only called, so nothing was streamed into the output file.
+//For Test #4 No search words were included, so it did not stream anything.
